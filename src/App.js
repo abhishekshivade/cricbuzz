@@ -1,23 +1,33 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { Route, Routes } from "react-router-dom";
+import Home from "./Routes/Home";
+import AboutUs from "./Routes/AboutUs";
+import ContactUs from "./Routes/ContactUs";
+import Stats from "./Routes/Stats";
+import Teams from "./Routes/Teams";
+import NavBar from "./Components/Navbar";
+import Dashboard from "./Routes/Dashboard";
+import Footer from "./Components/Footer";
+import LogIn from "./Routes/LogIn";
+import SignUp from "./Routes/SignUp";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="w-11/12 mx-auto mt-5">
+      <NavBar />
+
+      <Routes>
+        <Route index exact path="/" element={<Home />} />
+        <Route exact path="/about" element={<AboutUs />} />
+        <Route exact path="/contact" element={<ContactUs />} />
+        <Route exact path="/stats" element={<Stats />} />
+        <Route exact path="/teams" element={<Teams />} />
+        {/* <Route exact path="/dashboard" element={<Dashboard/>}/> */}
+        <Route exact path="/login" element={<LogIn/>}/>
+        <Route exact path="/signup" element={<SignUp/>}/>
+      </Routes>
+
+      <Footer/>
     </div>
   );
 }
