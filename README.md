@@ -2,6 +2,19 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## To Run API Server
+
+go to API folder
+  `cd /api/`
+  
+then Run server
+  `node server.js`
+
+server will run on
+  `https://localhost:8000`
+  
+  Open [http://localhost:8000](http://localhost:8000) to view it in your browser.
+
 ## Available Scripts
 
 In the project directory, you can run:
